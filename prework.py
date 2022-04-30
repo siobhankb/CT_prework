@@ -15,8 +15,11 @@ def first_odds():
 #Question 3
 #find max number in list
 def max_num_in_list(a_list):
+    ordered_list = sorted(a_list)
+    max_num = ordered_list[-1]
+    print("The max number in your list is " + str(max_num))
 
-#Question 4
+#Question 
 #tell if a given year is a leap year
 def is_leap_year(a_year):
     if a_year %4 == 0 and a_year % 100 != 0 or a_year % 400 == 0:
@@ -30,5 +33,9 @@ is_leap_year(int(year))
 #Question 5
 #check if numbers in a list are consecutive
 def is_consecutive(a_list):
-
-#Question 6
+    ordered_list = sorted(a_list)
+    compare_list = list(range(min(a_list), max(a_list) + 1))
+    if ordered_list == compare_list:
+        print("\n\tThe numbers in this list ARE consecutive.\n")
+    else:
+        print("\nThe numbers in this list are NOT consecutive.\n")
